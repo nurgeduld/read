@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <base target="_blank">
+  <style>
+:root {
+  --fg: #000; /* foreground  */
+  --bg: #fff; /* background  */
+  --bd: #000; /* border  */
+  --lk: #0095dd; /* link */
+  --hg: #ffff81; /* highlight  */
+}
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+  position: relative;
+
+  color: var(--fg);
+  border-color: var(--bd);
+  background-color: var(--bg);
+}
+body[data-mode="light"] {
+  color-scheme: light;
+  --fg: #222;
+  --bd: #222;
+  --bg: whitesmoke;
+}
+body[data-mode="dark"] {
+  color-scheme: dark;
+  --fg: #eee;
+  --bd: #eee;
+  --bg: #333;
+}
+body[data-mode="sepia"] {
+  color-scheme: light;
+  --fg: #5b4636;
+  --bd: #5b4636;
+  --bg: #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color-scheme: light;
+  --fg: #586e75;
+  --bd: #586e75;
+  --bg: #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color-scheme: light;
+  --fg: #2e3440;
+  --bd: #2e3440;
+  --bg: #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color-scheme: dark;
+  --fg: #cec4ac;
+  --bd: #cec4ac;
+  --bg: #282828;
+}
+body[data-mode="solarized-dark"] {
+  color-scheme: dark;
+  --fg: #839496;
+  --bd: #839496;
+  --bg: #002b36;
+}
+body[data-mode="nord-dark"] {
+  color-scheme: dark;
+  --fg: #e5e9f0;
+  --bd: #e5e9f0;
+  --bg: #2e3440;
+}
+
+@media print {
+  body[data-mode] {
+    --fg: #000;
+    --bd: #000;
+    --bg: #fff;
+
+    width: unset;
+    padding: 0;
+    margin: 0;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+svg:not([width]):not([height]) {
+  max-width: 25vmin;
+}
+a {
+  color: var(--lk);
+  text-decoration: none;
+}
+hr {
+  background-color: var(--bd);
+  height: 1px;
+  border: 0;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+mark.hghlght {
+  background-color: var(--hg);
+}
+body:not([data-columns="1"]) .page :is(h1, h2) {
+  column-span: all;
+  background-color: rgba(125, 125, 125, 0.1);
+  padding: 10px;
+}
+.hidden {
+  display: none;
+}
+
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+<title>Rethinking the Luddites in the Age of A.I.</title><title>Rethinking the Luddites in the Age of A.I. :: Reader View</title></head>
+<body tabindex="1" data-images="true" data-mode="sepia" data-font="sans-serif" data-columns="1" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.newyorker.com/books/page-turner/rethinking-the-luddites-in-the-age-of-ai">
+    <span>www.newyorker.com</span>
+    <span>/books/page-turner/rethinking-the-luddites-in-the-age-of-ai</span>
+  </a>
+  <h1 dir="auto" id="reader-title">Rethinking the Luddites in the Age of A.I.</h1>
+  <span dir="auto" id="reader-credits">Kyle Chayka</span>
+  <span dir="auto" id="reader-estimated-time">8-10 minutes</span>
+  <span dir="auto" id="published-time">9/26/2023</span>
+  <hr>
+  <div id="readability-page-1" class="page"><div data-journey-hook="client-content" data-testid="ArticlePageChunks"><p>On December 15, 1811, the London <em>Statesman</em> issued a warning about the state of the stocking industry in Nottingham. Twenty thousand textile workers had lost their jobs because of the incursion of automated machinery. Knitting machines known as lace frames allowed one employee to do the work of many without the skill set usually required. In protest, the beleaguered workers had begun breaking into factories to smash the machines. “Nine Hundred Lace Frames have been broken,” the newspaper reported. In response, the government had garrisoned six regiments of soldiers in the town, in a domestic invasion that became a kind of slow-burning civil war of factory owners, supported by the state, against workers. The article was apocalyptic: “God only knows what will be the end of it; nothing but ruin.”</p><p>The workers destroying the lace frames were the group who called themselves Luddites, after Ned Ludd, a (likely fictional) knitting-frame apprentice near Leicester who was said to have rebelled against his boss by destroying a frame with a hammer. Today, the word “Luddite” is used as an insult to anyone resistant to technological innovation; it suggests ignoramuses, sticks in the mud, obstacles to progress. But a new book by the journalist and author Brian Merchant, titled “<a data-offer-url="https://www.amazon.com/Blood-Machine-Origins-Rebellion-Against/dp/0316487740" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://www.amazon.com/Blood-Machine-Origins-Rebellion-Against/dp/0316487740&quot;}" href="https://www.amazon.com/Blood-Machine-Origins-Rebellion-Against/dp/0316487740?ots=1&amp;slotNum=0&amp;imprToken=f6c569f1-705c-e1f6-000&amp;tag=thneyo0f-20&amp;linkCode=w50" rel="nofollow noopener" target="_blank">Blood in the Machine</a>,” argues that Luddism stood not against technology per se but for the rights of workers above the inequitable profitability of machines. The book is a historical reconsideration of the movement and a gripping narrative of political resistance told in short vignettes.</p><p>The hero of the story is George Mellor, a young laborer from Huddersfield who worked as a so-called cropper, smoothing the raised surface of rough cloth with shears. He observed the increasing automation of the industry, concluded that it was unjust, and decided to join the insurgent Luddite movement. A physically towering figure, he organized his fellow-workers and led attacks on factories. One factory owner who was targeted was William Horsfall, a local cloth entrepreneur. Horsfall threatened to ride his horse through “Luddite blood” in order to keep his profitable factories going, hiring mercenaries and installing cannons to defend his machines. In the background of the story, figures such as the ineffectual Prince George, a sybaritic regent for his infirm father, George III, and Lord Byron, the poet, who voiced his sympathy for the Luddites in Parliament, debate which side to support: owners or workers. Byron exhorted the workers in his poem “Song for the Luddites” to “die fighting, or live free.”</p><p>Merchant ably demonstrates the dire stakes of the Luddites’ plight. The trades that had sustained livelihoods for generations were disappearing, and their families were starving. A Lancashire weaver’s weekly pay dropped from twenty-five shillings in 1800 to fourteen in 1811. The market was being flooded with cheaper, inferior goods such as “cut-ups,” stockings made from two pieces of cloth joined together, rather than knit as one continuous whole. The government repeatedly failed to intervene on behalf of the workers. What option remained was attacking the boss’s capital by disabling the factories. The secretive captains of the Luddite forces took on the pseudonym General Ludd or King Ludd, which they used to write public letters and to sign threats of attacks. The spectre of violence led some factory owners to abandon their plans for automation. They reverted to manual labor or closed up shop completely. For a time, it seemed that the Luddites were making headway in empowering themselves over the machines.</p><p>The book offers plenty of satisfying imagery for the twenty-first-century reader experiencing techlash. Merchant argues that the message of Luddism is just as relevant today, as our lives become increasingly enmeshed with digital platforms, from TikTok to Uber and Instacart, that translate our labor and attention into profit, “overlaying a sort of psychic factory onto its workers’ lives.” (Who hasn’t at times wished to take a hammer to their MacBook?) The Luddites sought revenge against the innovation that was holding them hostage. In Merchant’s telling, they were activists, punks, and masked celebrities standing up for the skilled working class, the successors to Robin Hood, another product of Nottingham. “Luddite” by that measure sounds like a compliment.</p><p>“Blood in the Machine” is being published just as we are facing a new wave of technological automation centering on <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/can-we-stop-the-singularity">artificial intelligence</a>—which some, including the consulting firm McKinsey, have labelled the “Fourth Industrial Revolution.” Merchant uses anachronistic terms like “startup” and “tech titan” to describe early factories and entrepreneurs, seeking to draw parallels with the present. (The book’s analytical sections are weaker than its narrative ones.) The “labor-saving technology” of today threatens new categories of jobs: customer service is being performed by chatbots; Amazon is selling e-books written by ChatGPT. Designers and illustrators are losing jobs to image generators; translators are being asked to “clean up” transcripts generated by A.I. The profusion of <a href="https://www.newyorker.com/culture/infinite-scroll/my-ai-writing-robot">dubious A.I.-generated content</a> resembles the badly made stockings of the nineteenth century. At the time of the Luddites, many hoped the subpar products would prove unacceptable to consumers or to the government. Instead, social norms adjusted. Both the mass-manufactured products and the regimented jobs that produced them quickly became entrenched.</p><p>The Luddites watched as sprawling factory buildings rose over their rural towns, concentrating labor that had traditionally been performed independently in the home or small workshops. The working conditions in those factories, often staffed by children, were execrable; the horror stories that emerged, of mangled limbs and bodies, eventually helped encourage reform. The victims of automation today are less immediately obvious. ChatGPT users can’t see the low-paid content moderators in countries such as Kenya who undergird <a href="https://www.newyorker.com/news/the-new-yorker-interview/its-not-possible-for-me-to-feel-or-be-creepy-an-interview-with-chatgpt">the program</a>’s output, performing an onerous psychological task that <a data-offer-url="https://crowd.cs.vt.edu/wp-content/uploads/2021/02/CHI21_final__The_Psychological_Well_Being_of_Content_Moderators-2.pdf" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://crowd.cs.vt.edu/wp-content/uploads/2021/02/CHI21_final__The_Psychological_Well_Being_of_Content_Moderators-2.pdf&quot;}" href="https://crowd.cs.vt.edu/wp-content/uploads/2021/02/CHI21_final__The_Psychological_Well_Being_of_Content_Moderators-2.pdf" rel="nofollow noopener" target="_blank">studies have shown</a> can induce P.T.S.D. There is no single machine that can be smashed to disable artificial intelligence. If the physical server farms that host A.I. programs were attacked, the software could simply be hosted elsewhere. What’s more, the foundation of A.I. is the raw material that humanity has already labored to produce: reams of text and images that programs process into patterns and then remix into fresh “content.” Unlike the machines of the first Industrial Revolution, A.I. does not necessarily need more input; it can sustain itself. “Jobs are definitely going to go away, full stop,” Sam Altman, the C.E.O. of OpenAI, recently told <a href="https://www.theatlantic.com/magazine/archive/2023/09/sam-altman-openai-chatgpt-gpt-4/674764/"><em>The Atlantic</em></a>.</p><p>The tragedy of the Luddites is not the fact that they failed to stop industrialization so much as the way in which they failed. In the end, Parliament “sided decisively with the entrepreneurs,” as Merchant writes, and frame-breaking was made a capital offense. Dozens of workers were executed for Luddite activities, including, in January of 1813, fourteen in one brutal day. George Mellor, the Luddite captain, was eventually convicted of assassinating Horsfall, the factory owner, and was hanged, at the age of twenty-three. Human rebellion proved inadequate against the pull of technological advancement.</p><p>“Blood in the Machine” suggests that although the forces of mechanization can feel beyond our control, the way society responds to such changes is not. Regulation of the textile industry could have protected the Luddite workers before they resorted to destruction. One proposal suggested a tax on every yard of cloth made by machine. After a pro-worker bill failed to pass in the House of Lords, Gravener Henson, a frame knitter turned advocate and historian, led an association of workers that demanded higher wages and labor protections, though such “combination” was outlawed at the time in the U.K. Eventually, Luddism faded into a more general political movement. By the late nineteenth century, the majority of Nottingham’s lace production had been mechanized. In the era of A.I., we have another opportunity to decide whether automation will create advantages for all, or whether its benefits will flow only to the business owners and investors looking to reduce their payrolls. One 1812 letter from the Luddites described their mission as fighting against “all Machinery hurtful to Commonality.” That remains a strong standard by which to judge technological gains.&nbsp;♦</p></div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+  
+
+
+<style id="note-styling">
+    .note {
+      position: absolute;
+      z-index: 10;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 5px;
+      min-width: 32px;
+      min-height: 32px;
+    }
+    .note:focus {
+      z-index: 11;
+    }
+    .note[type="0"] {
+      background-color: #fff740;
+      color: #2c2c2d;
+    }
+    .note[type="0"]::placeholder {
+      color: #868226;
+    }
+    .note[type="1"] {
+      background-color: #feff9c;
+      color: #2c2c2d;
+    }
+    .note[type="1"]::placeholder {
+      color: #6d6d3d;
+    }
+    .note[type="2"] {
+      background-color: #ff65a3;
+      color: #2c2c2d;
+    }
+    .note[type="2"]::placeholder {
+      color: #65263f;
+    }
+    .note[type="3"] {
+      background-color: #ff7eb9;
+      color: #2c2c2d;
+    }
+    .note[type="3"]::placeholder {
+      color: #562b3f;
+    }
+    .note[type="4"] {
+      background-color: #7afcff;
+      color: #295c5d;
+    }
+    .note[type="4"]::placeholder {
+      color: #377677;
+    }</style></body><style>body {
+      font-size:  15px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 600px;
+    }
+    p {
+      text-align: justify
+    }
+    .page {
+      line-height: 22.5px;
+      column-count: unset;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
